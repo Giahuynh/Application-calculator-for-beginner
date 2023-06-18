@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formcalc">Calculator
+        <br>
+        <input type="number" id="number1">
+        <input type="number" id="number2">
+        <br>
+        <button type="button" name="addres" onclick="addValue()">Addition(+)</button>
+        <button type="button" name="subres" onclick="subValue()">Subtraction(-)</button>
+        <button type="button" name="mulres" onclick="mulValue()">Multiplication(*)</button>
+        <button type="button" name="divres" onclick="divValue()">Division(/)</button>
+        <br>
+        Result:<input type="number" id="Result">
+    </form>
+    <script>
+        function addValue(){
+            let n1 = parseInt(document.getElementById("number1").value);
+            let n2 = parseInt(document.getElementById("number2").value);
+            res = n1 + n2;
+            document.formcalc.Result.value=res;
+        }
+        function subValue(){
+            let n1 = parseInt(document.getElementById("number1").value);
+            let n2 = parseInt(document.getElementById("number2").value);
+            res = n1 - n2;
+            document.formcalc.Result.value=res;
+        }
+        function mulValue(){
+            let n1 = parseInt(document.getElementById("number1").value);
+            let n2 = parseInt(document.getElementById("number2").value);
+            res = n1 * n2;
+            document.formcalc.Result.value=res;
+        }
+        function divValue(){
+            let n1 = parseInt(document.getElementById("number1").value);
+            let n2 = parseInt(document.getElementById("number2").value);
+            res = n1 / n2;
+            document.formcalc.Result.value=res;
+        }
+    </script>
+</body>
+</html>
